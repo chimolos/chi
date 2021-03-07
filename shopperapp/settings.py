@@ -1,3 +1,4 @@
+import django_heroku
 """
 Django settings for shopperapp project.
 
@@ -23,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '(hj)-iha8h-1n45jnm+whx!9yri3f0_n)uo(v7v=&nd-znmcs3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []#'chishopperapp.herouapp.com', 'localhost'
 
 
 # Application definition
@@ -173,3 +174,5 @@ EMAIL_HOST_PASSWORD= ""
  
 
 ######################################
+
+django_heroku.settings(locals())
